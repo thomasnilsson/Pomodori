@@ -1,0 +1,6 @@
+framework module Pods_PomodoriTests {
+  umbrella header "Pods-PomodoriTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C9A87491FFBDC080047D367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A87481FFBDC080047D367 /* AppDelegate.swift */; };
+		3C9A874E1FFBDC080047D367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9A874C1FFBDC080047D367 /* Main.storyboard */; };
+		3C9A87501FFBDC080047D367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9A874F1FFBDC080047D367 /* Assets.xcassets */; };
+		3C9A87531FFBDC080047D367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9A87511FFBDC080047D367 /* LaunchScreen.storyboard */; };
+		3C9A875E1FFBDC080047D367 /* PomodoriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A875D1FFBDC080047D367 /* PomodoriTests.swift */; };
+		3C9A87691FFBDC080047D367 /* PomodoriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A87681FFBDC080047D367 /* PomodoriUITests.swift */; };
+		3C9A87781FFBDEF20047D367 /* PomodoroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A87771FFBDEF20047D367 /* PomodoroVC.swift */; };
+		3CB654801FFC7F1600065D80 /* MFRoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB6547F1FFC7F1600065D80 /* MFRoundProgressView.swift */; };
+		3CB694231FFC58DC00C3F468 /* CircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB694221FFC58DC00C3F468 /* CircleVC.swift */; };
+		6426586C455001D484A5EA00 /* Pods_Pomodori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B97D1EEBE1076233A3239 /* Pods_Pomodori.framework */; };
+		6CB2B213D5118D3493109D34 /* Pods_PomodoriTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64ADAFE9A23249FD41713F43 /* Pods_PomodoriTests.framework */; };
+		95F501F2DF49D5CF01CC72EB /* Pods_PomodoriUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A3DD308FEABAD9FA16CAAA /* Pods_PomodoriUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C9A875A1FFBDC080047D367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C9A873D1FFBDC080047D367 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C9A87441FFBDC080047D367;
+			remoteInfo = Pomodori;
+		};
+		3C9A87651FFBDC080047D367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C9A873D1FFBDC080047D367 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C9A87441FFBDC080047D367;
+			remoteInfo = Pomodori;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C1B97D1EEBE1076233A3239 /* Pods_Pomodori.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pomodori.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E37E758B92EE1131F604C4 /* Pods-Pomodori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodori.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pomodori/Pods-Pomodori.release.xcconfig"; sourceTree = "<group>"; };
+		29DCA9C83C1DFBC8B0915253 /* Pods-PomodoriUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoriUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoriUITests/Pods-PomodoriUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		37C47FE7885B09BEDD0D3B13 /* Pods-PomodoriTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoriTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoriTests/Pods-PomodoriTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C9A87451FFBDC080047D367 /* Pomodori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodori.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C9A87481FFBDC080047D367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C9A874D1FFBDC080047D367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C9A874F1FFBDC080047D367 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C9A87521FFBDC080047D367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C9A87541FFBDC080047D367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C9A87591FFBDC080047D367 /* PomodoriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C9A875D1FFBDC080047D367 /* PomodoriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoriTests.swift; sourceTree = "<group>"; };
+		3C9A875F1FFBDC080047D367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C9A87641FFBDC080047D367 /* PomodoriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C9A87681FFBDC080047D367 /* PomodoriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoriUITests.swift; sourceTree = "<group>"; };
+		3C9A876A1FFBDC080047D367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C9A87771FFBDEF20047D367 /* PomodoroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroVC.swift; sourceTree = "<group>"; };
+		3CB6547F1FFC7F1600065D80 /* MFRoundProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFRoundProgressView.swift; sourceTree = "<group>"; };
+		3CB694221FFC58DC00C3F468 /* CircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleVC.swift; sourceTree = "<group>"; };
+		40A3DD308FEABAD9FA16CAAA /* Pods_PomodoriUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomodoriUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64ADAFE9A23249FD41713F43 /* Pods_PomodoriTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomodoriTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CAD8BB63DBF54911E2E086D /* Pods-PomodoriUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoriUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoriUITests/Pods-PomodoriUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B1476E3AA500018744C2CF21 /* Pods-Pomodori.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodori.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pomodori/Pods-Pomodori.debug.xcconfig"; sourceTree = "<group>"; };
+		F671041E876B3C47B9D7C0A1 /* Pods-PomodoriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoriTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoriTests/Pods-PomodoriTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C9A87421FFBDC080047D367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6426586C455001D484A5EA00 /* Pods_Pomodori.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9A87561FFBDC080047D367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB2B213D5118D3493109D34 /* Pods_PomodoriTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9A87611FFBDC080047D367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F501F2DF49D5CF01CC72EB /* Pods_PomodoriUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C9A873C1FFBDC080047D367 = {
+			isa = PBXGroup;
+			children = (
+				3C9A87471FFBDC080047D367 /* Pomodori */,
+				3C9A875C1FFBDC080047D367 /* PomodoriTests */,
+				3C9A87671FFBDC080047D367 /* PomodoriUITests */,
+				3C9A87461FFBDC080047D367 /* Products */,
+				7F0DC676BB4C6984A6A380D1 /* Pods */,
+				D5594B9C8A1328F1E74E4284 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3C9A87461FFBDC080047D367 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C9A87451FFBDC080047D367 /* Pomodori.app */,
+				3C9A87591FFBDC080047D367 /* PomodoriTests.xctest */,
+				3C9A87641FFBDC080047D367 /* PomodoriUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C9A87471FFBDC080047D367 /* Pomodori */ = {
+			isa = PBXGroup;
+			children = (
+				3CA917E01FFC4A4300207DF1 /* Circle */,
+				3C9A87761FFBDED30047D367 /* VC */,
+				3C9A87481FFBDC080047D367 /* AppDelegate.swift */,
+				3C9A874C1FFBDC080047D367 /* Main.storyboard */,
+				3C9A874F1FFBDC080047D367 /* Assets.xcassets */,
+				3C9A87511FFBDC080047D367 /* LaunchScreen.storyboard */,
+				3C9A87541FFBDC080047D367 /* Info.plist */,
+			);
+			path = Pomodori;
+			sourceTree = "<group>";
+		};
+		3C9A875C1FFBDC080047D367 /* PomodoriTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C9A875D1FFBDC080047D367 /* PomodoriTests.swift */,
+				3C9A875F1FFBDC080047D367 /* Info.plist */,
+			);
+			path = PomodoriTests;
+			sourceTree = "<group>";
+		};
+		3C9A87671FFBDC080047D367 /* PomodoriUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3C9A87681FFBDC080047D367 /* PomodoriUITests.swift */,
+				3C9A876A1FFBDC080047D367 /* Info.plist */,
+			);
+			path = PomodoriUITests;
+			sourceTree = "<group>";
+		};
+		3C9A87761FFBDED30047D367 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3C9A87771FFBDEF20047D367 /* PomodoroVC.swift */,
+				3CB694221FFC58DC00C3F468 /* CircleVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		3CA917E01FFC4A4300207DF1 /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				3CB6547F1FFC7F1600065D80 /* MFRoundProgressView.swift */,
+			);
+			path = Circle;
+			sourceTree = "<group>";
+		};
+		7F0DC676BB4C6984A6A380D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1476E3AA500018744C2CF21 /* Pods-Pomodori.debug.xcconfig */,
+				19E37E758B92EE1131F604C4 /* Pods-Pomodori.release.xcconfig */,
+				F671041E876B3C47B9D7C0A1 /* Pods-PomodoriTests.debug.xcconfig */,
+				37C47FE7885B09BEDD0D3B13 /* Pods-PomodoriTests.release.xcconfig */,
+				29DCA9C83C1DFBC8B0915253 /* Pods-PomodoriUITests.debug.xcconfig */,
+				7CAD8BB63DBF54911E2E086D /* Pods-PomodoriUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5594B9C8A1328F1E74E4284 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C1B97D1EEBE1076233A3239 /* Pods_Pomodori.framework */,
+				64ADAFE9A23249FD41713F43 /* Pods_PomodoriTests.framework */,
+				40A3DD308FEABAD9FA16CAAA /* Pods_PomodoriUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C9A87441FFBDC080047D367 /* Pomodori */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C9A876D1FFBDC080047D367 /* Build configuration list for PBXNativeTarget "Pomodori" */;
+			buildPhases = (
+				97AF4EFCD0312021460B2E0E /* [CP] Check Pods Manifest.lock */,
+				3C9A87411FFBDC080047D367 /* Sources */,
+				3C9A87421FFBDC080047D367 /* Frameworks */,
+				3C9A87431FFBDC080047D367 /* Resources */,
+				80670710137DE7412A699E7E /* [CP] Embed Pods Frameworks */,
+				5F42D899AE8ECBF17F00CE30 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pomodori;
+			productName = Pomodori;
+			productReference = 3C9A87451FFBDC080047D367 /* Pomodori.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C9A87581FFBDC080047D367 /* PomodoriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C9A87701FFBDC080047D367 /* Build configuration list for PBXNativeTarget "PomodoriTests" */;
+			buildPhases = (
+				DC4E7E4398F9BDE8C6ABA48D /* [CP] Check Pods Manifest.lock */,
+				3C9A87551FFBDC080047D367 /* Sources */,
+				3C9A87561FFBDC080047D367 /* Frameworks */,
+				3C9A87571FFBDC080047D367 /* Resources */,
+				AE93D102BCF7ABFEA7DF5FD4 /* [CP] Embed Pods Frameworks */,
+				37576CD96BF707C34D84A2A2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C9A875B1FFBDC080047D367 /* PBXTargetDependency */,
+			);
+			name = PomodoriTests;
+			productName = PomodoriTests;
+			productReference = 3C9A87591FFBDC080047D367 /* PomodoriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C9A87631FFBDC080047D367 /* PomodoriUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C9A87731FFBDC080047D367 /* Build configuration list for PBXNativeTarget "PomodoriUITests" */;
+			buildPhases = (
+				D11801236DC13D7D350F0A23 /* [CP] Check Pods Manifest.lock */,
+				3C9A87601FFBDC080047D367 /* Sources */,
+				3C9A87611FFBDC080047D367 /* Frameworks */,
+				3C9A87621FFBDC080047D367 /* Resources */,
+				4B8C7B12603002EBFB2AACA3 /* [CP] Embed Pods Frameworks */,
+				6195DB34190CF8C0A2E6A5E6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C9A87661FFBDC080047D367 /* PBXTargetDependency */,
+			);
+			name = PomodoriUITests;
+			productName = PomodoriUITests;
+			productReference = 3C9A87641FFBDC080047D367 /* PomodoriUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C9A873D1FFBDC080047D367 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Thomas Nilsson";
+				TargetAttributes = {
+					3C9A87441FFBDC080047D367 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3C9A87581FFBDC080047D367 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3C9A87441FFBDC080047D367;
+					};
+					3C9A87631FFBDC080047D367 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3C9A87441FFBDC080047D367;
+					};
+				};
+			};
+			buildConfigurationList = 3C9A87401FFBDC080047D367 /* Build configuration list for PBXProject "Pomodori" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C9A873C1FFBDC080047D367;
+			productRefGroup = 3C9A87461FFBDC080047D367 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C9A87441FFBDC080047D367 /* Pomodori */,
+				3C9A87581FFBDC080047D367 /* PomodoriTests */,
+				3C9A87631FFBDC080047D367 /* PomodoriUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C9A87431FFBDC080047D367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C9A87531FFBDC080047D367 /* LaunchScreen.storyboard in Resources */,
+				3C9A87501FFBDC080047D367 /* Assets.xcassets in Resources */,
+				3C9A874E1FFBDC080047D367 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9A87571FFBDC080047D367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9A87621FFBDC080047D367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37576CD96BF707C34D84A2A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PomodoriTests/Pods-PomodoriTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B8C7B12603002EBFB2AACA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PomodoriUITests/Pods-PomodoriUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F42D899AE8ECBF17F00CE30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pomodori/Pods-Pomodori-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6195DB34190CF8C0A2E6A5E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PomodoriUITests/Pods-PomodoriUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80670710137DE7412A699E7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Pomodori/Pods-Pomodori-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KDCircularProgress/KDCircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pomodori/Pods-Pomodori-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AF4EFCD0312021460B2E0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pomodori-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE93D102BCF7ABFEA7DF5FD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PomodoriTests/Pods-PomodoriTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D11801236DC13D7D350F0A23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomodoriUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4E7E4398F9BDE8C6ABA48D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PomodoriTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C9A87411FFBDC080047D367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C9A87491FFBDC080047D367 /* AppDelegate.swift in Sources */,
+				3C9A87781FFBDEF20047D367 /* PomodoroVC.swift in Sources */,
+				3CB694231FFC58DC00C3F468 /* CircleVC.swift in Sources */,
+				3CB654801FFC7F1600065D80 /* MFRoundProgressView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9A87551FFBDC080047D367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C9A875E1FFBDC080047D367 /* PomodoriTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C9A87601FFBDC080047D367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C9A87691FFBDC080047D367 /* PomodoriUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C9A875B1FFBDC080047D367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C9A87441FFBDC080047D367 /* Pomodori */;
+			targetProxy = 3C9A875A1FFBDC080047D367 /* PBXContainerItemProxy */;
+		};
+		3C9A87661FFBDC080047D367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C9A87441FFBDC080047D367 /* Pomodori */;
+			targetProxy = 3C9A87651FFBDC080047D367 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C9A874C1FFBDC080047D367 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C9A874D1FFBDC080047D367 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C9A87511FFBDC080047D367 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C9A87521FFBDC080047D367 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C9A876B1FFBDC080047D367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C9A876C1FFBDC080047D367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C9A876E1FFBDC080047D367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1476E3AA500018744C2CF21 /* Pods-Pomodori.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR32X35UU3;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+				INFOPLIST_FILE = Pomodori/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = thomasnilsson.Pomodori;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C9A876F1FFBDC080047D367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19E37E758B92EE1131F604C4 /* Pods-Pomodori.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR32X35UU3;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
+				INFOPLIST_FILE = Pomodori/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = thomasnilsson.Pomodori;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3C9A87711FFBDC080047D367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F671041E876B3C47B9D7C0A1 /* Pods-PomodoriTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR32X35UU3;
+				INFOPLIST_FILE = PomodoriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = thomasnilsson.PomodoriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pomodori.app/Pomodori";
+			};
+			name = Debug;
+		};
+		3C9A87721FFBDC080047D367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C47FE7885B09BEDD0D3B13 /* Pods-PomodoriTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR32X35UU3;
+				INFOPLIST_FILE = PomodoriTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = thomasnilsson.PomodoriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pomodori.app/Pomodori";
+			};
+			name = Release;
+		};
+		3C9A87741FFBDC080047D367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29DCA9C83C1DFBC8B0915253 /* Pods-PomodoriUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR32X35UU3;
+				INFOPLIST_FILE = PomodoriUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = thomasnilsson.PomodoriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pomodori;
+			};
+			name = Debug;
+		};
+		3C9A87751FFBDC080047D367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CAD8BB63DBF54911E2E086D /* Pods-PomodoriUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LR32X35UU3;
+				INFOPLIST_FILE = PomodoriUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = thomasnilsson.PomodoriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pomodori;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C9A87401FFBDC080047D367 /* Build configuration list for PBXProject "Pomodori" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C9A876B1FFBDC080047D367 /* Debug */,
+				3C9A876C1FFBDC080047D367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C9A876D1FFBDC080047D367 /* Build configuration list for PBXNativeTarget "Pomodori" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C9A876E1FFBDC080047D367 /* Debug */,
+				3C9A876F1FFBDC080047D367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C9A87701FFBDC080047D367 /* Build configuration list for PBXNativeTarget "PomodoriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C9A87711FFBDC080047D367 /* Debug */,
+				3C9A87721FFBDC080047D367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C9A87731FFBDC080047D367 /* Build configuration list for PBXNativeTarget "PomodoriUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C9A87741FFBDC080047D367 /* Debug */,
+				3C9A87751FFBDC080047D367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C9A873D1FFBDC080047D367 /* Project object */;
+}

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4A-sk-1d5">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pomodoro Session-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Pomodoro Session" id="BYZ-38-t0r" customClass="PomodoroVC" customModule="Pomodori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USK-gU-NGB">
+                                <rect key="frame" x="16" y="164" width="288" height="90"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="75"/>
+                                <color key="textColor" red="0.9931060857707914" green="0.99621020417528072" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDH-kQ-TWC">
+                                <rect key="frame" x="96" y="358" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="GlU-LT-g0u"/>
+                                    <constraint firstAttribute="height" constant="128" id="pss-nT-v9K"/>
+                                </constraints>
+                                <state key="normal" image="tomato">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZI-to-UER"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pomodori completed: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs6-n9-VYw">
+                                <rect key="frame" x="16" y="274" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67800385124074558" green="0.5728300534858759" blue="0.75418385152284262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qs6-n9-VYw" secondAttribute="trailing" constant="16" id="DlG-f4-qAJ"/>
+                            <constraint firstItem="Qs6-n9-VYw" firstAttribute="top" secondItem="USK-gU-NGB" secondAttribute="bottom" constant="20" id="Ufx-Bt-b4w"/>
+                            <constraint firstItem="rDH-kQ-TWC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajv-Gy-kXQ"/>
+                            <constraint firstItem="rDH-kQ-TWC" firstAttribute="top" secondItem="Qs6-n9-VYw" secondAttribute="bottom" constant="60" id="c2V-Ku-atI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="USK-gU-NGB" secondAttribute="trailing" constant="16" id="f3t-xx-V8J"/>
+                            <constraint firstItem="USK-gU-NGB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hXT-MU-0zF"/>
+                            <constraint firstItem="USK-gU-NGB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="osY-Af-xfH"/>
+                            <constraint firstItem="Qs6-n9-VYw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="t7N-jB-TbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pomodoriLabel" destination="Qs6-n9-VYw" id="tay-ik-9bV"/>
+                        <outlet property="pomodoroButton" destination="rDH-kQ-TWC" id="lWP-jy-Jc3"/>
+                        <outlet property="timerLabel" destination="USK-gU-NGB" id="nJT-wO-519"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="-510"/>
+        </scene>
+        <!--CircleVC-->
+        <scene sceneID="ohD-uu-qgY">
+            <objects>
+                <viewController id="0sH-9E-xv9" customClass="CircleVC" customModule="Pomodori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bYD-Va-i0s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-jZ-YDq">
+                                <rect key="frame" x="16" y="447" width="288" height="41"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="0sH-9E-xv9" eventType="touchUpInside" id="3It-Bf-uEP"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-Ys-ksp" customClass="MFRoundProgressView" customModule="Pomodori" customModuleProvider="target">
+                                <rect key="frame" x="20" y="137" width="280" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="IWv-YZ-7Wh"/>
+                                    <constraint firstAttribute="width" constant="280" id="fBx-pm-lnm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67800385119999995" green="0.57283005350000005" blue="0.7541838515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pR7-Sc-CV4" firstAttribute="bottom" secondItem="dKr-jZ-YDq" secondAttribute="bottom" constant="80" id="0R3-s1-Iip"/>
+                            <constraint firstItem="dKr-jZ-YDq" firstAttribute="top" secondItem="bqB-Ys-ksp" secondAttribute="bottom" constant="30" id="N6U-jD-uLU"/>
+                            <constraint firstItem="dKr-jZ-YDq" firstAttribute="leading" secondItem="pR7-Sc-CV4" secondAttribute="leading" constant="16" id="Zot-3f-ZjU"/>
+                            <constraint firstItem="pR7-Sc-CV4" firstAttribute="trailing" secondItem="bqB-Ys-ksp" secondAttribute="trailing" constant="20" id="fTJ-kW-QCz"/>
+                            <constraint firstItem="pR7-Sc-CV4" firstAttribute="trailing" secondItem="dKr-jZ-YDq" secondAttribute="trailing" constant="16" id="fk4-eP-aUv"/>
+                            <constraint firstItem="bqB-Ys-ksp" firstAttribute="leading" secondItem="pR7-Sc-CV4" secondAttribute="leading" constant="20" id="jKd-ON-Drl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pR7-Sc-CV4"/>
+                    </view>
+                    <connections>
+                        <outlet property="roundView" destination="bqB-Ys-ksp" id="vsk-Qn-FkV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTJ-sJ-RuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1599.375" y="256.6901408450704"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U6h-Yh-bk3">
+            <objects>
+                <navigationController id="K4A-sk-1d5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Dds-MG-It6">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GPh-Ya-Ygl" kind="relationship" relationship="rootViewController" id="Y61-ur-BpN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKW-h9-qtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-523"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="VwP-Sd-xjd">
+            <objects>
+                <viewController title="Menu" id="GPh-Ya-Ygl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9t-Jl-5Cn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a8b-X8-p4q">
+                                <rect key="frame" x="16" y="174" width="288" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-4x-Opn">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="60"/>
+                                        <color key="backgroundColor" red="0.76862745098039209" green="0.13725490196078433" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="GRO-2D-mgk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="New Session">
+                                            <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="RBZ-R8-1uL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KZ-rK-u1m">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="60"/>
+                                        <color key="backgroundColor" red="0.76862745099999996" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0sH-9E-xv9" kind="show" id="VFQ-nT-nnr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAC-oE-iMf">
+                                        <rect key="frame" x="0.0" y="160" width="288" height="60"/>
+                                        <color key="backgroundColor" red="0.76862745099999996" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Overview">
+                                            <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67800385119999995" green="0.57283005350000005" blue="0.7541838515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a8b-X8-p4q" firstAttribute="centerY" secondItem="P9t-Jl-5Cn" secondAttribute="centerY" id="QU3-zR-3aN"/>
+                            <constraint firstItem="a8b-X8-p4q" firstAttribute="leading" secondItem="nP6-sz-DiR" secondAttribute="leading" constant="16" id="zUa-P6-FMF"/>
+                            <constraint firstItem="nP6-sz-DiR" firstAttribute="trailing" secondItem="a8b-X8-p4q" secondAttribute="trailing" constant="16" id="zfo-gS-tSb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nP6-sz-DiR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eQk-do-9cT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jn-mh-b6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="-510"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tomato" width="128" height="128"/>
+    </resources>
+</document>
