@@ -88,7 +88,7 @@ class MFRoundProgressView: UIView {
         let progressPath = UIBezierPath()
         progressPath.addArc(withCenter: CGPoint(x: progressRect.midX, y: progressRect.midY), radius: progressRect.width / 2, startAngle: startAngle, endAngle: (endAngle - startAngle) * (percent / 100) + startAngle, clockwise: true)
         progressColor.setStroke()
-        progressPath.lineWidth = 18
+        progressPath.lineWidth = 15
         progressPath.lineCapStyle = CGLineCap.round
         progressPath.stroke()
         
