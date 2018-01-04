@@ -75,40 +75,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-jZ-YDq">
-                                <rect key="frame" x="16" y="447" width="288" height="41"/>
-                                <color key="backgroundColor" red="0.76862745099999996" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Test">
-                                    <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="0sH-9E-xv9" eventType="touchUpInside" id="3It-Bf-uEP"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-Ys-ksp" customClass="MFRoundProgressView" customModule="Pomodori" customModuleProvider="target">
-                                <rect key="frame" x="20" y="137" width="280" height="280"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-Ys-ksp" customClass="MFRoundProgressView" customModule="Pomodori" customModuleProvider="target">
+                                <rect key="frame" x="20" y="100" width="280" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie7-lx-cSi">
+                                        <rect key="frame" x="16" y="125" width="248" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                        <state key="normal" title="00:00">
+                                            <color key="titleColor" red="0.10937320883888882" green="0.57283005350000005" blue="0.7541838515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="0sH-9E-xv9" eventType="touchUpInside" id="lb7-35-WSp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Ie7-lx-cSi" firstAttribute="centerY" secondItem="bqB-Ys-ksp" secondAttribute="centerY" id="EUg-i8-4NG"/>
                                     <constraint firstAttribute="height" constant="280" id="IWv-YZ-7Wh"/>
+                                    <constraint firstItem="Ie7-lx-cSi" firstAttribute="centerX" secondItem="bqB-Ys-ksp" secondAttribute="centerX" id="OCA-xG-Osd"/>
+                                    <constraint firstItem="Ie7-lx-cSi" firstAttribute="leading" secondItem="bqB-Ys-ksp" secondAttribute="leading" constant="16" id="SYU-pC-G5q"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ie7-lx-cSi" secondAttribute="trailing" constant="16" id="VNS-fv-3A5"/>
                                     <constraint firstAttribute="width" constant="280" id="fBx-pm-lnm"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.67800385119999995" green="0.57283005350000005" blue="0.7541838515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pR7-Sc-CV4" firstAttribute="bottom" secondItem="dKr-jZ-YDq" secondAttribute="bottom" constant="80" id="0R3-s1-Iip"/>
-                            <constraint firstItem="dKr-jZ-YDq" firstAttribute="top" secondItem="bqB-Ys-ksp" secondAttribute="bottom" constant="30" id="N6U-jD-uLU"/>
-                            <constraint firstItem="dKr-jZ-YDq" firstAttribute="leading" secondItem="pR7-Sc-CV4" secondAttribute="leading" constant="16" id="Zot-3f-ZjU"/>
                             <constraint firstItem="pR7-Sc-CV4" firstAttribute="trailing" secondItem="bqB-Ys-ksp" secondAttribute="trailing" constant="20" id="fTJ-kW-QCz"/>
-                            <constraint firstItem="pR7-Sc-CV4" firstAttribute="trailing" secondItem="dKr-jZ-YDq" secondAttribute="trailing" constant="16" id="fk4-eP-aUv"/>
                             <constraint firstItem="bqB-Ys-ksp" firstAttribute="leading" secondItem="pR7-Sc-CV4" secondAttribute="leading" constant="20" id="jKd-ON-Drl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pR7-Sc-CV4"/>
                     </view>
                     <connections>
                         <outlet property="roundView" destination="bqB-Ys-ksp" id="vsk-Qn-FkV"/>
+                        <outlet property="timerButton" destination="Ie7-lx-cSi" id="KzV-Bc-9Bl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTJ-sJ-RuL" userLabel="First Responder" sceneMemberID="firstResponder"/>

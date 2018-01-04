@@ -41,9 +41,9 @@ class MFRoundProgressView: UIView {
         }
         
         // Color Declarations
-        let progressColor = UIColor(red: 186/255, green: 31/255, blue: 3/255, alpha: 0.7)
-        let progressBackgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
-        let titleColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
+        let progressColor = UIColor(red: 61/255, green: 106/255, blue: 219/255, alpha: 0.9)
+        let progressBackgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
+        let titleColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
         
         // Shadow Declarations
         let innerShadow = UIColor.black.withAlphaComponent(0.0)
@@ -80,15 +80,15 @@ class MFRoundProgressView: UIView {
         
         let progressBackgroundPath = UIBezierPath(ovalIn: CGRect(x: rect.minX + kMFPadding/2, y: rect.minY + kMFPadding/2, width: rect.size.width - kMFPadding, height: rect.size.height - kMFPadding))
         progressBackgroundColor.setStroke()
-        progressBackgroundPath.lineWidth = 20
+        progressBackgroundPath.lineWidth = 3
         progressBackgroundPath.stroke()
         
         // Progress Drawing
         let progressRect = CGRect(x: rect.minX + kMFPadding/2, y: rect.minY + kMFPadding/2, width: rect.size.width - kMFPadding, height: rect.size.height - kMFPadding)
         let progressPath = UIBezierPath()
-        progressPath.addArc(withCenter: CGPoint(x: progressRect.midX, y: progressRect.midY), radius: progressRect.width / 2, startAngle: startAngle, endAngle: (endAngle - startAngle) * (percent / 100) + startAngle, clockwise: true)
+        progressPath.addArc(withCenter: CGPoint(x: progressRect.midX, y: progressRect.midY), radius: 0.9 * progressRect.width / 2, startAngle: startAngle, endAngle: (endAngle - startAngle) * (percent / 100) + startAngle, clockwise: true)
         progressColor.setStroke()
-        progressPath.lineWidth = 15
+        progressPath.lineWidth = 8
         progressPath.lineCapStyle = CGLineCap.round
         progressPath.stroke()
         
