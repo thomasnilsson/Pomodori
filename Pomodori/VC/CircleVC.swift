@@ -40,7 +40,17 @@ class CircleVC: UIViewController {
             timerButton.setTitle("00:00", for: .normal)
             roundView.percent = CGFloat(0.0)
             statusLabel.text = StringValues().tapToBeginMsg
+            saveResults()
         }
+    }
+    
+    func saveResults() {
+        let sessionKey = StringValues().lastSessionKey
+        let pomodoriKey = StringValues().lastSessionPomodori
+        let defaults = UserDefaults.standard
+        let date = StringValues().getDate()
+        defaults.set("\(date)", forKey: sessionKey)
+        defaults.set("\(pomodorosCompleted)", forKey: pomodoriKey)
     }
     
     // Freeze the timer
