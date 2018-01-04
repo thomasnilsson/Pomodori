@@ -13,8 +13,10 @@
 		3C9A87531FFBDC080047D367 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9A87511FFBDC080047D367 /* LaunchScreen.storyboard */; };
 		3C9A875E1FFBDC080047D367 /* PomodoriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A875D1FFBDC080047D367 /* PomodoriTests.swift */; };
 		3C9A87691FFBDC080047D367 /* PomodoriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A87681FFBDC080047D367 /* PomodoriUITests.swift */; };
-		3C9A87781FFBDEF20047D367 /* PomodoroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A87771FFBDEF20047D367 /* PomodoroVC.swift */; };
 		3CB654801FFC7F1600065D80 /* MFRoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB6547F1FFC7F1600065D80 /* MFRoundProgressView.swift */; };
+		3CB654821FFDCBF100065D80 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB654811FFDCBF100065D80 /* MainMenuVC.swift */; };
+		3CB654841FFDCC0800065D80 /* UISetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB654831FFDCC0800065D80 /* UISetter.swift */; };
+		3CB654871FFDCD9A00065D80 /* StringValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB654861FFDCD9A00065D80 /* StringValues.swift */; };
 		3CB694231FFC58DC00C3F468 /* CircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB694221FFC58DC00C3F468 /* CircleVC.swift */; };
 		6426586C455001D484A5EA00 /* Pods_Pomodori.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B97D1EEBE1076233A3239 /* Pods_Pomodori.framework */; };
 		6CB2B213D5118D3493109D34 /* Pods_PomodoriTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64ADAFE9A23249FD41713F43 /* Pods_PomodoriTests.framework */; };
@@ -55,8 +57,10 @@
 		3C9A87641FFBDC080047D367 /* PomodoriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9A87681FFBDC080047D367 /* PomodoriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoriUITests.swift; sourceTree = "<group>"; };
 		3C9A876A1FFBDC080047D367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C9A87771FFBDEF20047D367 /* PomodoroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroVC.swift; sourceTree = "<group>"; };
 		3CB6547F1FFC7F1600065D80 /* MFRoundProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFRoundProgressView.swift; sourceTree = "<group>"; };
+		3CB654811FFDCBF100065D80 /* MainMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
+		3CB654831FFDCC0800065D80 /* UISetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISetter.swift; sourceTree = "<group>"; };
+		3CB654861FFDCD9A00065D80 /* StringValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValues.swift; sourceTree = "<group>"; };
 		3CB694221FFC58DC00C3F468 /* CircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleVC.swift; sourceTree = "<group>"; };
 		40A3DD308FEABAD9FA16CAAA /* Pods_PomodoriUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomodoriUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64ADAFE9A23249FD41713F43 /* Pods_PomodoriTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PomodoriTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,7 @@
 		3C9A87471FFBDC080047D367 /* Pomodori */ = {
 			isa = PBXGroup;
 			children = (
+				3CB654851FFDCD8E00065D80 /* Aux */,
 				3CA917E01FFC4A4300207DF1 /* Circle */,
 				3C9A87761FFBDED30047D367 /* VC */,
 				3C9A87481FFBDC080047D367 /* AppDelegate.swift */,
@@ -150,8 +155,8 @@
 		3C9A87761FFBDED30047D367 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				3C9A87771FFBDEF20047D367 /* PomodoroVC.swift */,
 				3CB694221FFC58DC00C3F468 /* CircleVC.swift */,
+				3CB654811FFDCBF100065D80 /* MainMenuVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -162,6 +167,15 @@
 				3CB6547F1FFC7F1600065D80 /* MFRoundProgressView.swift */,
 			);
 			path = Circle;
+			sourceTree = "<group>";
+		};
+		3CB654851FFDCD8E00065D80 /* Aux */ = {
+			isa = PBXGroup;
+			children = (
+				3CB654831FFDCC0800065D80 /* UISetter.swift */,
+				3CB654861FFDCD9A00065D80 /* StringValues.swift */,
+			);
+			path = Aux;
 			sourceTree = "<group>";
 		};
 		7F0DC676BB4C6984A6A380D1 /* Pods */ = {
@@ -483,8 +497,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C9A87491FFBDC080047D367 /* AppDelegate.swift in Sources */,
-				3C9A87781FFBDEF20047D367 /* PomodoroVC.swift in Sources */,
+				3CB654821FFDCBF100065D80 /* MainMenuVC.swift in Sources */,
+				3CB654871FFDCD9A00065D80 /* StringValues.swift in Sources */,
 				3CB694231FFC58DC00C3F468 /* CircleVC.swift in Sources */,
+				3CB654841FFDCC0800065D80 /* UISetter.swift in Sources */,
 				3CB654801FFC7F1600065D80 /* MFRoundProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

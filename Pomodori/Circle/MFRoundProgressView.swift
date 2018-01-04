@@ -41,7 +41,7 @@ class MFRoundProgressView: UIView {
         }
         
         // Color Declarations
-        let progressColor = UIColor(red: 61/255, green: 106/255, blue: 219/255, alpha: 0.9)
+        let progressColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.9)
         let progressBackgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)
         let titleColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
         
@@ -80,7 +80,7 @@ class MFRoundProgressView: UIView {
         
         let progressBackgroundPath = UIBezierPath(ovalIn: CGRect(x: rect.minX + kMFPadding/2, y: rect.minY + kMFPadding/2, width: rect.size.width - kMFPadding, height: rect.size.height - kMFPadding))
         progressBackgroundColor.setStroke()
-        progressBackgroundPath.lineWidth = 3
+        progressBackgroundPath.lineWidth = 2
         progressBackgroundPath.stroke()
         
         // Progress Drawing

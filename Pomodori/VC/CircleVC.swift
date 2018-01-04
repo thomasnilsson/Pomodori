@@ -4,6 +4,8 @@ class CircleVC: UIViewController {
     
     @IBOutlet weak var roundView: MFRoundProgressView!
     @IBOutlet weak var timerButton: UIButton!
+    @IBOutlet weak var pomodoriLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     var value = 0
     
@@ -14,10 +16,9 @@ class CircleVC: UIViewController {
     var running = false
     var timer: Timer?
     
-    let pomodoroTimeSeconds = 60 // 25 minutes
-    let pauseTimeSeconds = 10 // 3 minutes
+    let studyTime = 25 * 60 // 25 minutes
+    let breakTime = 3 * 60 // 3 minutes
     var pomodorosCompleted = 0
-    let pomodoriMessage = "Pomodori completed: "
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +32,14 @@ class CircleVC: UIViewController {
         navigationItem.setHidesBackButton(running, animated: true)
         
         if running {
-            startTimer()
+            startStudyingTimer()
         }
         else {
             stopTimer()
             view.backgroundColor = rose
             timerButton.setTitle("00:00", for: .normal)
             roundView.percent = CGFloat(0.0)
+            statusLabel.text = StringValues().tapToBeginMsg
         }
     }
     
@@ -47,9 +49,10 @@ class CircleVC: UIViewController {
         timer = nil
     }
     
-    func startPauseTimer() {
+    func startBreakTimer() {
+        statusLabel.text = StringValues().breakMsg
         view.backgroundColor = green
-        var timeLeft = pauseTimeSeconds
+        var timeLeft = breakTime
         setTimerLabel(seconds: timeLeft)
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             timeLeft -= 1
@@ -57,34 +60,40 @@ class CircleVC: UIViewController {
             self.setTimerLabel(seconds: timeLeft)
             if timeLeft < 1 {
                 self.stopTimer()
-                self.startTimer()
+                self.startStudyingTimer()
             }
         }
     }
     
     // From https://github.com/zach-snell/Swift3_Stopwatch_Tutorial/
     // Starts and runs the visual stopwatch timer
-    func startTimer() {
-        var timeLeft = pomodoroTimeSeconds
+    func startStudyingTimer() {
+        statusLabel.text = StringValues().studyMsg
+        var timeLeft = studyTime
         view.backgroundColor = red
         setTimerLabel(seconds: timeLeft)
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             timeLeft -= 1
-            self.updateProgressBar(secondsLeft: timeLeft, timer: "pomodoro")
+            self.updateProgressBar(secondsLeft: timeLeft, timer: "study")
             self.setTimerLabel(seconds: timeLeft)
             if timeLeft < 1 {
                 self.pomodorosCompleted += 1
+                self.updatePomodoriLabel()
                 self.stopTimer()
-                self.startPauseTimer()
+                self.startBreakTimer()
             }
         }
     }
     
     func updateProgressBar(secondsLeft: Int, timer: String) {
-        let total = timer == "pomodoro" ? Double(pomodoroTimeSeconds) : Double(pauseTimeSeconds)
+        let total = timer == "study" ? Double(studyTime) : Double(breakTime)
         let timeLeft = Double(secondsLeft)
         let progress = 100.0 * (total - timeLeft) / total
         roundView.percent = CGFloat(progress)
+    }
+    
+    func updatePomodoriLabel() {
+        pomodoriLabel.text = StringValues().pomodoriCompletedMsg(x: pomodorosCompleted)
     }
     
     // Set the timer hours/minutes/seconds.
