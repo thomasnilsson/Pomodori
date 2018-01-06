@@ -9,6 +9,9 @@ struct StringValues {
     let lastSessionKey = "LAST_SESSION"
     let lastSessionPomodori = "LAST_SESSION_POMODORI"
     
+    let pomodoriLengthKey = "POMODORI_LENGTH"
+    let breakLengthKey = "BREAK_LENGTH"
+    
     func pomodoriCompletedMsg(x: Int) -> String {
         return "Pomodori Completed: \(x)"
     }
@@ -22,6 +25,11 @@ struct StringValues {
         }
         // Something bad happened here...
         return "0000-00-00"
+    }
+    
+    func readFromDefaults(key: String) -> String {
+        let value = UserDefaults.standard.object(forKey: key) as? String ?? "DEFAULT"
+        return value
     }
     
     

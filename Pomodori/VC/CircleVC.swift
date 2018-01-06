@@ -11,18 +11,19 @@ class CircleVC: UIViewController {
     
     let red = UIColor(red: 186/255, green: 31/255, blue: 3/255, alpha: 1)
     let green = UIColor(red: 3/255, green: 150/255, blue: 89/255, alpha: 1)
-    let rose = UIColor(red: 173/255, green: 146/255, blue: 192/255, alpha: 1)
+    let backgroundColor = UIColor(red: 40/255, green: 40/255, blue: 40/255, alpha: 1)
     
     var running = false
     var timer: Timer?
-    
-    let studyTime = 25 * 60 // 25 minutes
-    let breakTime = 3 * 60 // 3 minutes
+    let secPerMin = 60
+    var studyTime = 0
+    var breakTime = 0
     var pomodorosCompleted = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = rose
+        view.backgroundColor = backgroundColor
+        setTimerValues()
     }
 
     @IBAction func buttonTapped(_ sender: Any) {
@@ -36,7 +37,7 @@ class CircleVC: UIViewController {
         }
         else {
             stopTimer()
-            view.backgroundColor = rose
+            view.backgroundColor = backgroundColor
             timerButton.setTitle("00:00", for: .normal)
             roundView.percent = CGFloat(0.0)
             statusLabel.text = StringValues().tapToBeginMsg
@@ -113,6 +114,28 @@ class CircleVC: UIViewController {
         let secondsPortion = String(format: "%02d", seconds % 60 )
         let time = "\(minutesPortion):\(secondsPortion)"
         timerButton.setTitle(time, for: .normal)
+    }
+    
+    func setTimerValues() {
+        let defaults = UserDefaults.standard
+        let pomodoroKey = StringValues().pomodoriLengthKey
+        let breakKey = StringValues().breakLengthKey
+        
+        let readPomodoro = StringValues().readFromDefaults(key: pomodoroKey)
+        let readBreak = StringValues().readFromDefaults(key: breakKey)
+       
+        if let pTime = Int(readPomodoro), let bTime = Int(readBreak) {
+            studyTime = pTime * secPerMin
+            breakTime = bTime * secPerMin
+            
+            print("pTime: \(pTime)")
+            print("pTime: \(bTime)")
+        }
+        else {
+            // Default case
+            studyTime = 25 * secPerMin
+            breakTime = 3 * secPerMin
+        }
     }
     
 }

@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.67800385119999995" green="0.57283005350000005" blue="0.7541838515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vVe-TG-wmr" firstAttribute="leading" secondItem="pR7-Sc-CV4" secondAttribute="leading" constant="16" id="A6o-ss-GYQ"/>
                             <constraint firstItem="bqB-Ys-ksp" firstAttribute="centerY" secondItem="bYD-Va-i0s" secondAttribute="centerY" id="TZ3-EQ-HRg"/>
@@ -151,11 +151,14 @@
                                         <state key="normal" title="Settings">
                                             <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qlq-gt-vS5" kind="show" id="GB0-Ye-FUK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.67800385119999995" green="0.57283005350000005" blue="0.7541838515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a8b-X8-p4q" firstAttribute="top" secondItem="bvX-UK-10a" secondAttribute="bottom" constant="40" id="7nK-ee-Vwq"/>
                             <constraint firstItem="a8b-X8-p4q" firstAttribute="leading" secondItem="nP6-sz-DiR" secondAttribute="leading" constant="16" id="8GM-fb-GCc"/>
@@ -176,6 +179,120 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jn-mh-b6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839" y="-510"/>
+        </scene>
+        <!--Settings PomodoroVC-->
+        <scene sceneID="9dY-0C-dIf">
+            <objects>
+                <viewController id="qlq-gt-vS5" customClass="SettingsPomodoroVC" customModule="Pomodori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WCR-Ji-aqF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose pomodoro length" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFr-AN-Yh5">
+                                <rect key="frame" x="16" y="84" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Srj-ye-nbS">
+                                <rect key="frame" x="16" y="133" width="288" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAZ-86-oys">
+                                <rect key="frame" x="16" y="399" width="288" height="60"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jKq-fb-A5I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButtonTapped:" destination="qlq-gt-vS5" eventType="touchUpInside" id="BsO-WP-GOi"/>
+                                    <segue destination="fs7-VR-tsp" kind="show" id="fPh-Yc-oiW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KFr-AN-Yh5" firstAttribute="leading" secondItem="K82-63-pfE" secondAttribute="leading" constant="16" id="3r2-Js-Jjk"/>
+                            <constraint firstItem="Srj-ye-nbS" firstAttribute="leading" secondItem="K82-63-pfE" secondAttribute="leading" constant="16" id="I4S-7N-WRD"/>
+                            <constraint firstItem="Srj-ye-nbS" firstAttribute="top" secondItem="KFr-AN-Yh5" secondAttribute="bottom" constant="25" id="JAU-I6-4Eb"/>
+                            <constraint firstItem="K82-63-pfE" firstAttribute="trailing" secondItem="Srj-ye-nbS" secondAttribute="trailing" constant="16" id="LPR-Of-ZFX"/>
+                            <constraint firstItem="KFr-AN-Yh5" firstAttribute="top" secondItem="K82-63-pfE" secondAttribute="top" constant="20" id="TlM-qg-dq0"/>
+                            <constraint firstItem="K82-63-pfE" firstAttribute="trailing" secondItem="mAZ-86-oys" secondAttribute="trailing" constant="16" id="exq-1d-rrO"/>
+                            <constraint firstItem="mAZ-86-oys" firstAttribute="leading" secondItem="K82-63-pfE" secondAttribute="leading" constant="16" id="jL7-dc-caK"/>
+                            <constraint firstItem="K82-63-pfE" firstAttribute="trailing" secondItem="KFr-AN-Yh5" secondAttribute="trailing" constant="16" id="kjX-M0-g5l"/>
+                            <constraint firstItem="mAZ-86-oys" firstAttribute="top" secondItem="Srj-ye-nbS" secondAttribute="bottom" constant="50" id="qIZ-jm-eNg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K82-63-pfE"/>
+                    </view>
+                    <connections>
+                        <outlet property="okButton" destination="mAZ-86-oys" id="eXj-pW-LkM"/>
+                        <outlet property="pickerView" destination="Srj-ye-nbS" id="qnb-zb-7YR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhF-Eb-DgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="495"/>
+        </scene>
+        <!--Settings BreakVC-->
+        <scene sceneID="plU-PE-Ka5">
+            <objects>
+                <viewController id="fs7-VR-tsp" customClass="SettingsBreakVC" customModule="Pomodori" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ITn-Xh-zCH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose break length" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1N4-nN-Xdf">
+                                <rect key="frame" x="16" y="84" width="288" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6T-vP-9Vl">
+                                <rect key="frame" x="16" y="133" width="288" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEM-RD-NDa">
+                                <rect key="frame" x="16" y="399" width="288" height="60"/>
+                                <color key="backgroundColor" red="0.76862745099999996" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lPg-cF-inp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="tintColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.99310608580000004" green="0.99621020419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="okButtonTapped:" destination="fs7-VR-tsp" eventType="touchUpInside" id="IPj-f2-jwF"/>
+                                    <segue destination="K4A-sk-1d5" kind="show" id="euf-3p-GOS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a2B-K7-yv4" firstAttribute="trailing" secondItem="1N4-nN-Xdf" secondAttribute="trailing" constant="16" id="3lZ-qi-N9a"/>
+                            <constraint firstItem="a2B-K7-yv4" firstAttribute="trailing" secondItem="BEM-RD-NDa" secondAttribute="trailing" constant="16" id="62c-mn-lci"/>
+                            <constraint firstItem="1N4-nN-Xdf" firstAttribute="top" secondItem="a2B-K7-yv4" secondAttribute="top" constant="20" id="GRk-h0-Ggy"/>
+                            <constraint firstItem="a2B-K7-yv4" firstAttribute="trailing" secondItem="n6T-vP-9Vl" secondAttribute="trailing" constant="16" id="RIo-z8-Ipk"/>
+                            <constraint firstItem="BEM-RD-NDa" firstAttribute="top" secondItem="n6T-vP-9Vl" secondAttribute="bottom" constant="50" id="WAh-kf-q12"/>
+                            <constraint firstItem="n6T-vP-9Vl" firstAttribute="top" secondItem="1N4-nN-Xdf" secondAttribute="bottom" constant="25" id="gfD-0v-aZ3"/>
+                            <constraint firstItem="BEM-RD-NDa" firstAttribute="leading" secondItem="a2B-K7-yv4" secondAttribute="leading" constant="16" id="j2h-XR-KqE"/>
+                            <constraint firstItem="1N4-nN-Xdf" firstAttribute="leading" secondItem="a2B-K7-yv4" secondAttribute="leading" constant="16" id="yF7-xF-mtz"/>
+                            <constraint firstItem="n6T-vP-9Vl" firstAttribute="leading" secondItem="a2B-K7-yv4" secondAttribute="leading" constant="16" id="zgi-s4-rMR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a2B-K7-yv4"/>
+                    </view>
+                    <connections>
+                        <outlet property="okButton" destination="BEM-RD-NDa" id="2JI-1S-9pK"/>
+                        <outlet property="pickerView" destination="n6T-vP-9Vl" id="UQF-07-0PH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAi-yU-6G9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="494"/>
         </scene>
     </scenes>
     <resources>

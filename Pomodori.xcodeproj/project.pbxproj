@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C5718F220005B630051E6D8 /* SettingsPomodoroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5718F120005B630051E6D8 /* SettingsPomodoroVC.swift */; };
+		3C5718F4200063070051E6D8 /* SettingsBreakVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5718F3200063070051E6D8 /* SettingsBreakVC.swift */; };
 		3C9A87491FFBDC080047D367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A87481FFBDC080047D367 /* AppDelegate.swift */; };
 		3C9A874E1FFBDC080047D367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C9A874C1FFBDC080047D367 /* Main.storyboard */; };
 		3C9A87501FFBDC080047D367 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C9A874F1FFBDC080047D367 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		19E37E758B92EE1131F604C4 /* Pods-Pomodori.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pomodori.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pomodori/Pods-Pomodori.release.xcconfig"; sourceTree = "<group>"; };
 		29DCA9C83C1DFBC8B0915253 /* Pods-PomodoriUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoriUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoriUITests/Pods-PomodoriUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		37C47FE7885B09BEDD0D3B13 /* Pods-PomodoriTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PomodoriTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PomodoriTests/Pods-PomodoriTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C5718F120005B630051E6D8 /* SettingsPomodoroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPomodoroVC.swift; sourceTree = "<group>"; };
+		3C5718F3200063070051E6D8 /* SettingsBreakVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsBreakVC.swift; sourceTree = "<group>"; };
 		3C9A87451FFBDC080047D367 /* Pomodori.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodori.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9A87481FFBDC080047D367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C9A874D1FFBDC080047D367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 			children = (
 				3CB694221FFC58DC00C3F468 /* CircleVC.swift */,
 				3CB654811FFDCBF100065D80 /* MainMenuVC.swift */,
+				3C5718F120005B630051E6D8 /* SettingsPomodoroVC.swift */,
+				3C5718F3200063070051E6D8 /* SettingsBreakVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -502,6 +508,8 @@
 				3CB694231FFC58DC00C3F468 /* CircleVC.swift in Sources */,
 				3CB654841FFDCC0800065D80 /* UISetter.swift in Sources */,
 				3CB654801FFC7F1600065D80 /* MFRoundProgressView.swift in Sources */,
+				3C5718F220005B630051E6D8 /* SettingsPomodoroVC.swift in Sources */,
+				3C5718F4200063070051E6D8 /* SettingsBreakVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
