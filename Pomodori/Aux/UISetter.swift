@@ -22,16 +22,7 @@ class UISetter {
     
     // Makes background gradient
     func setBackground(vc: UIViewController) {
-        let topColor = UIColor.black
-        let bottomColor = UIColor.black
-
-        let gradientColors: [CGColor] = [topColor.cgColor, bottomColor.cgColor]
-        let locations: [NSNumber] = [0.0, 1.0]
-        
-        let gradientLayer: CAGradientLayer = CAGradientLayer()
-        gradientLayer.colors = gradientColors
-        gradientLayer.locations = locations
-        gradientLayer.frame = vc.view.bounds
-        vc.view.layer.insertSublayer(gradientLayer, at: 0)
+        let background = UIColor(red: 40/255, green: 40/255, blue: 40/255, alpha: 1)
+        vc.view.backgroundColor = background
     }
 }
