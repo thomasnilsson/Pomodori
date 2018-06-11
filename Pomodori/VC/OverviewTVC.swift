@@ -9,18 +9,30 @@ class OverviewTVC: UITableViewController {
         super.viewDidLoad()
         dateEntries = createDateEntries()
         pomodoriEntries = createPomodoriEntries()
+        
         UISetter().setBackground(vc: self)
         self.tableView.rowHeight = 45
     }
     
     func createDateEntries() -> [String] {
-        let x = ["01/02-2017", "02/02-2017", "03/02-2017", "04/02-2017"]
-        return x
+        var dates: [String] = []
+        
+        for i in 1...30 {
+            let day = String(format: "%02d", i)
+            dates.append("2017-01-\(day)")
+        }
+        return dates
     }
-    
+
     func createPomodoriEntries() -> [String] {
-        let x = ["3", "5", "1", "2"]
-        return x
+        var pomorodi: [String] = []
+        
+        for _ in 1...30 {
+            let random = Int(arc4random_uniform(12) + 1)
+            pomorodi.append("\(random)")
+        }
+        
+        return pomorodi
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +47,7 @@ class OverviewTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell") as! DateCell
         
         cell.setData(date: dateEntry, pomodori: pomodoriEntry)
-        
+    
         return cell
     }
 }

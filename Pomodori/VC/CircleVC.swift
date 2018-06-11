@@ -117,7 +117,6 @@ class CircleVC: UIViewController {
     }
     
     func setTimerValues() {
-        let defaults = UserDefaults.standard
         let pomodoroKey = StringValues().pomodoriLengthKey
         let breakKey = StringValues().breakLengthKey
         
